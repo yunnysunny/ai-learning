@@ -28,9 +28,9 @@
 - Prompt caching：缓存读写的计费差异
 - 幻觉、不确定性、"模型的话不算数"——为后面的工具调用埋伏笔
 
-### 03 模型从哪来：云端 API、本地部署与网关
+### 03 模型从哪来：云端 API 与网关
 - 直连厂商 vs 中转/网关（OpenRouter、Vercel AI Gateway、Cloudflare AI Gateway）
-- 本地跑模型：Ollama、vLLM、LM Studio，都暴露 OpenAI 兼容接口
+- 本地部署（Ollama、vLLM 等）硬件成本高，只一句带过
 - 怎么选模型：能力、价格、延迟、上下文、是否支持工具调用
 - BYOK（自带 key）类应用的设置项：协议、baseUrl、apiKey、model（tab-agent 设置页就是这四项）
 
