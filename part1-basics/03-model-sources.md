@@ -90,7 +90,7 @@ model:   anthropic/claude-sonnet-4.5     ← 厂商/模型
 
 再说价格。第 02 篇提到，输入、输出、缓存读写是分开计价的，输出最贵。但比较价格时要结合自己的流量结构来算。agent 每走一步都要重发全部历史，输入量远远大于输出量，缓存命中率的影响也很大，只盯着"每百万输出 token 多少钱"很容易选错。
 
-延迟其实包含两个数字：从发出请求到看到第一个字的首字延迟，以及之后每秒能输出多少 token 的输出速度。聊天界面对首字延迟很敏感，后台批处理只关心总耗时。推理模型的首字延迟里包含了思考时间，长的可以到几十秒。
+延迟要按第 02 篇讲过的几个指标分开看。聊天界面对首字延迟（TTFT）很敏感，用户还会在意后面的字来得匀不匀；后台批处理只关心端到端的总耗时。推理模型的首字延迟里包含了思考时间，选它之前要先确认你的场景等得起。
 
 上下文窗口够用就好，但要把工具定义、系统提示和工具结果都算进去，在 agent 场景下，这些内容往往比对话本身还长。另外，窗口大不代表模型在长上下文里依然可靠，第 02 篇提到的"中间迷失"现象在长窗口上更明显。
 
@@ -156,7 +156,7 @@ BYOK（Bring Your Own Key）指应用本身不提供模型，由用户填入自�
 三种协议拼接路径的规则不一样，这是 BYOK 设置里最常出错的地方：
 
 | 协议 | 官方 baseUrl | 应用拼接的路径 | 鉴权头 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | openai-completions | `https://api.openai.com/v1` | `{baseUrl}/chat/completions` | `Authorization: Bearer {key}` |
 | anthropic-messages | `https://api.anthropic.com` | `{baseUrl}/v1/messages` | `x-api-key: {key}` |
 | google-generative-ai | `https://generativelanguage.googleapis.com/v1beta` | `{baseUrl}/models/{model}:generateContent` | `x-goog-api-key: {key}` |
