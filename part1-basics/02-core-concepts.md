@@ -1,7 +1,7 @@
 # 02 使用大模型前必须懂的核心概念
 
 > 系列：AI 学习系列教程 · 第一部分 大模型基础
-> 配套示例：`pi-leaning-examples/part1-basics/src/02-tokens.ts`、`02-sampling.ts`、`02-sse.ts`
+> 配套示例：`ai-learning-examples/part1-basics/src/02-tokens.ts`、`02-sampling.ts`、`02-sse.ts`
 
 上一篇讲了大模型是怎么来的，结论是：它是一个"根据前文预测下一个 token"的函数。这一篇把这句话拆开，逐个讲清楚你在任何一家 API 文档里都会碰到的概念。
 

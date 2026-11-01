@@ -287,7 +287,7 @@
 
 ## 已确定的约定
 - 文稿：本目录 `E:\kuaipan\code\markdown\pi-leaning`，按部分分目录（`part1-basics/` … `part5-practice/`）。
-- 示例：单独项目 `E:\kuaipan\code\ai\pi-leaning-examples`，pnpm workspace，每个部分一个目录，第五部分再按章节分子目录逐章叠加。
+- 示例：单独项目 `E:\kuaipan\code\ai\ai-learning-examples`，pnpm workspace，每个部分一个目录，第五部分再按章节分子目录逐章叠加。
 - 第四部分先自己写 mini-agent（底座是第 09 章的统一层 mini-llm），每章末对照 pi；pi 的用法集中在第 23 章。第五部分以 mini-agent 为底座。
 - 第一部分讲到 attention 的直觉图解（不推公式细节）。
 - 第二部分覆盖 OpenAI Responses API。
